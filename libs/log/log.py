@@ -1,6 +1,5 @@
 import datetime
-from libs.conifg import ProjectConfigPath,RootName
+from libs.conifg import RootName
 def log(text,mode='INFO'):
     if str.upper(mode) == 'INFO' or str.upper(mode) == 'WARN':
-        prefix = f"{RootName} {datetime.datetime.now()} [{str.upper(mode)}]"
-        print(f'{prefix} {text}')
+        print(f'{RootName} {datetime.datetime.now()}] [{str.upper(mode)}] {text}')
